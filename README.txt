@@ -1,24 +1,22 @@
-DEEPAK SINGH 'PREMI' — PREMIUM WEBSITE
-============================================
+DEEPAK SINGH 'PREMI' — PREMIUM WEBSITE V2
+=============================================
 
-Folder structure:
+Files:
 - index.html
 - css/style.css
 - js/script.js
-- assets/gallery-1.jpg
-- assets/gallery-2.jpg
-- assets/gallery-3.jpg
+- assets/11 original uploaded images
 
-Open index.html to preview locally.
+How to run:
+1. Extract the ZIP.
+2. Keep the folder structure unchanged.
+3. Open index.html in Chrome.
+4. For best results, upload the whole folder to your hosting/Vercel/Netlify.
 
-The site is intentionally designed as a premium personal-brand portfolio:
-• cinematic black/gold visual language
-• responsive mobile design
-• animated reveals
-• premium typography
-• photo gallery
-• cinema/music section
-• social links
-• booking/contact CTA
+Social links included:
+YouTube: https://www.youtube.com/@deepaksinghpremi
+Instagram: https://www.instagram.com/deepaksinghpremi/
+Facebook: supplied share link in the page.
 
-To publish on Vercel/Netlify/GitHub Pages, upload the whole folder.
+Note:
+The profile copy is based on information supplied by the client/user. Verify professional titles, awards and other factual claims before public launch.
