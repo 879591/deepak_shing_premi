@@ -1,1 +1,0 @@
-# deepak_shing_premi
