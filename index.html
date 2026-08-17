@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="दीपक सिंह प्रेमी — कवि, लेखक एवं साहित्यिक आयोजक">
+<title>दीपक सिंह प्रेमी | कवि एवं लेखक</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+:root{--bg:#09080d;--card:#13111a;--gold:#f6c453;--gold2:#ffdf82;--text:#f7f4ed;--muted:#b9b3a8;--line:rgba(255,255,255,.10);--accent:#8d4bff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans Devanagari',system-ui,sans-serif;background:radial-gradient(circle at 75% 5%,rgba(141,75,255,.18),transparent 28%),radial-gradient(circle at 15% 30%,rgba(246,196,83,.08),transparent 30%),var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(9,8,13,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display',serif;font-size:25px;color:var(--gold2);letter-spacing:.2px}
+.logo span{color:#fff}
+nav{display:flex;gap:24px;font-size:14px;color:#ddd}
+nav a:hover{color:var(--gold)}
+.menu{display:none;border:1px solid var(--line);background:transparent;color:#fff;padding:8px 11px;border-radius:10px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:120px 0 70px}
+.kicker{display:inline-flex;gap:9px;align-items:center;color:var(--gold2);border:1px solid rgba(246,196,83,.28);padding:7px 12px;border-radius:999px;background:rgba(246,196,83,.07);font-size:13px;margin-bottom:18px}
+h1{font-family:'Playfair Display','Noto Sans Devanagari',serif;font-size:clamp(45px,7vw,78px);line-height:1.03;margin-bottom:18px}
+h1 em{font-style:normal;color:var(--gold)}
+.lead{font-size:18px;color:#d5d0c8;max-width:620px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:#fff;color:#111;font-weight:700}
+.btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));border:0}
+.btn.ghost{background:transparent;color:#fff}
+.hero-photo{position:relative}
+.hero-photo:before{content:"";position:absolute;inset:-16px;border:1px solid rgba(246,196,83,.25);border-radius:28px;transform:rotate(2deg)}
+.hero-photo img{position:relative;width:100%;height:560px;object-fit:cover;object-position:center;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.5)}
+.badge{position:absolute;bottom:22px;left:-16px;z-index:2;background:rgba(19,17,26,.92);border:1px solid var(--line);padding:12px 16px;border-radius:15px;backdrop-filter:blur(10px)}
+.badge b{color:var(--gold2);display:block}.badge small{color:#c8c2b8}
+section{padding:90px 0}
+.section-title{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:12px}
+.section-sub{color:var(--muted);max-width:700px;margin-bottom:35px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.about-card{background:linear-gradient(145deg,rgba(246,196,83,.10),rgba(141,75,255,.08));border:1px solid var(--line);padding:32px;border-radius:24px}
+.quote{font-family:'Playfair Display',serif;font-size:28px;line-height:1.4;color:#f9e7b0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:rgba(255,255,255,.035);border:1px solid var(--line);padding:24px;border-radius:20px}
+.card h3{color:var(--gold2);margin-bottom:8px}.card p{color:#c7c1b8}
+.events{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.event{padding:25px;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(246,196,83,.05));border:1px solid var(--line)}
+.event .date{color:var(--gold);font-weight:800;font-size:14px}.event h3{font-size:22px;margin:6px 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery figure{overflow:hidden;border-radius:18px;border:1px solid var(--line);background:#111}
+.gallery img{width:100%;height:290px;object-fit:cover;display:block;transition:.45s}
+.gallery figure:hover img{transform:scale(1.05)}
+.gallery figcaption{padding:10px 12px;color:#c8c2b8;font-size:13px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-card{padding:30px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.035)}
+.contact a{color:var(--gold2)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#999;text-align:center}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}.modal img{max-width:95vw;max-height:88vh;border-radius:16px}.close{position:absolute;top:20px;right:25px;font-size:34px;color:#fff;cursor:pointer}
+@media(max-width:800px){
+ nav{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:105px}.hero-photo img{height:430px}.about,.events,.contact{grid-template-columns:1fr}.grid,.gallery{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){.grid,.gallery{grid-template-columns:1fr}.section-title{font-size:34px}.hero-photo img{height:390px}h1{font-size:48px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">दीपक <span>सिंह प्रेमी</span></a>
+    <nav>
+      <a href="#about">परिचय</a><a href="#work">साहित्य</a><a href="#events">कार्यक्रम</a><a href="#gallery">गैलरी</a><a href="#contact">संपर्क</a>
+    </nav>
+    <button class="menu" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero container">
+  <div>
+    <div class="kicker">✦ कवि • लेखक • साहित्यिक व्यक्तित्व</div>
+    <h1>दीपक सिंह <em>प्रेमी</em></h1>
+    <p class="lead">शब्दों, संवेदनाओं और मंच की ऊर्जा से साहित्य को लोगों तक पहुँचाने वाले कवि एवं लेखक। यह वेबसाइट उनके साहित्यिक सफर, कार्यक्रमों और यादगार पलों का डिजिटल संग्रह है।</p>
+    <div class="cta">
+      <a class="btn gold" href="#gallery">फोटो गैलरी देखें</a>
+      <a class="btn ghost" href="#contact">बुकिंग / संपर्क</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="images/deepak-3.jpg" alt="दीपक सिंह प्रेमी — मंच पर">
+    <div class="badge"><b>Poet • Writer</b><small>बस्ती, उत्तर प्रदेश</small></div>
+  </div>
+</section>
+
+<section id="about">
+<div class="container about">
+  <div class="about-card">
+    <div class="quote">“शब्द जब दिल से निकलते हैं, तो किसी न किसी दिल तक जरूर पहुँचते हैं।”</div>
+  </div>
+  <div>
+    <div class="kicker">ABOUT THE ARTIST</div>
+    <h2 class="section-title">साहित्य और मंच से जुड़ा सफर</h2>
+    <p class="section-sub">दीपक सिंह प्रेमी को उपलब्ध सामग्री में कवि एवं लेखक के रूप में प्रस्तुत किया गया है। उनकी मंचीय प्रस्तुतियों और साहित्यिक आयोजनों की तस्वीरें इस वेबसाइट पर सुरक्षित की गई हैं।</p>
+    <div class="grid">
+      <div class="card"><h3>कवि</h3><p>कविता, काव्य-पाठ और मंचीय प्रस्तुतियों से साहित्यिक अभिव्यक्ति।</p></div>
+      <div class="card"><h3>लेखक</h3><p>शब्दों और विचारों के माध्यम से रचनात्मक लेखन।</p></div>
+      <div class="card"><h3>आयोजन</h3><p>राष्ट्रीय कवि सम्मेलन और मुशायरा जैसे साहित्यिक कार्यक्रमों से जुड़ाव।</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+  <div class="kicker">LITERARY PROFILE</div>
+  <h2 class="section-title">साहित्यिक पहचान</h2>
+  <p class="section-sub">उपलब्ध पोस्टर में उन्हें “Poet” और “writer” के रूप में प्रस्तुत किया गया है। मंच पर वे कविता/काव्य प्रस्तुति करते दिखाई देते हैं।</p>
+  <div class="events">
+    <div class="event"><div class="date">31 जुलाई 2026</div><h3>राष्ट्रीय कवि सम्मेलन मुशायरा</h3><p>मुंशी प्रेमचंद जी की 146वीं जयंती के अवसर पर आयोजित कार्यक्रम।</p></div>
+    <div class="event"><div class="date">4 जुलाई — साहित्यिक आयोजन</div><h3>राष्ट्रीय कवि सम्मेलन / मुशायरा</h3><p>उपलब्ध तस्वीरों में साहित्यिक मंच, सम्मान और काव्य प्रस्तुति के दृश्य।</p></div>
+  </div>
+</div>
+</section>
+
+<section id="events">
+<div class="container">
+  <div class="kicker">EVENT MOMENTS</div>
+  <h2 class="section-title">मंच और सम्मान के यादगार पल</h2>
+  <p class="section-sub">सम्मान, काव्य-पाठ, अतिथियों के साथ मुलाकात और साहित्यिक आयोजनों की झलकियाँ।</p>
+  <div class="grid">
+    <div class="card"><h3>काव्य पाठ</h3><p>मंच पर माइक्रोफोन के साथ प्रस्तुति देते हुए।</p></div>
+    <div class="card"><h3>सम्मान समारोह</h3><p>माला और पुष्पगुच्छ से सम्मानित किए जाने के क्षण।</p></div>
+    <div class="card"><h3>साहित्यिक संगत</h3><p>कवि सम्मेलन और मुशायरे से जुड़े साहित्यकारों के साथ यादें।</p></div>
+  </div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+  <div class="kicker">PHOTO ARCHIVE</div>
+  <h2 class="section-title">फोटो गैलरी</h2>
+  <p class="section-sub">आपके द्वारा भेजी गई सभी 6 तस्वीरें वेबसाइट में शामिल हैं। किसी फोटो पर टैप करके उसे बड़ा देखें।</p>
+  <div class="gallery">
+    <figure><img src="images/deepak-1.jpg" alt="साहित्यिक कार्यक्रम में दीपक सिंह प्रेमी" onclick="openImg(this.src)"><figcaption>साहित्यिक आयोजन और सम्मान</figcaption></figure>
+    <figure><img src="images/deepak-2.jpg" alt="मंच पर काव्य प्रस्तुति" onclick="openImg(this.src)"><figcaption>मंच से काव्य प्रस्तुति</figcaption></figure>
+    <figure><img src="images/deepak-3.jpg" alt="दीपक सिंह प्रेमी प्रोफाइल पोस्टर" onclick="openImg(this.src)"><figcaption>Poet & Writer प्रोफाइल</figcaption></figure>
+    <figure><img src="images/deepak-4.jpg" alt="दीपक सिंह प्रेमी की सोशल मीडिया पोस्ट" onclick="openImg(this.src)"><figcaption>डिजिटल प्रोफाइल / संपर्क कार्ड</figcaption></figure>
+    <figure><img src="images/deepak-5.jpg" alt="सम्मान समारोह" onclick="openImg(this.src)"><figcaption>सम्मान समारोह का दृश्य</figcaption></figure>
+    <figure><img src="images/deepak-6.jpg" alt="राष्ट्रीय कवि सम्मेलन में सम्मान" onclick="openImg(this.src)"><figcaption>राष्ट्रीय कवि सम्मेलन की याद</figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="kicker">GET IN TOUCH</div>
+  <h2 class="section-title">संपर्क एवं बुकिंग</h2>
+  <div class="contact">
+    <div class="contact-card">
+      <h3>ई-मेल</h3>
+      <p style="margin-top:8px"><a href="mailto:deepaksinghpremikavi@gmail.com">deepaksinghpremikavi@gmail.com</a></p>
+      <p style="margin-top:18px;color:#aaa">कवि सम्मेलन, साहित्यिक कार्यक्रम एवं मंचीय प्रस्तुति के लिए संपर्क करें।</p>
+    </div>
+    <div class="contact-card">
+      <h3>Facebook</h3>
+      <p style="margin-top:8px"><a href="https://www.facebook.com/deepaksinghpremi" target="_blank" rel="noopener">facebook.com/deepaksinghpremi</a></p>
+      <p style="margin-top:18px;color:#aaa">ऑनलाइन प्रोफाइल और गतिविधियों के लिए सोशल लिंक।</p>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="container">© 2026 दीपक सिंह प्रेमी • Poet & Writer • Basti, Uttar Pradesh</div>
+</footer>
+
+<div class="modal" id="modal" onclick="closeImg()">
+  <span class="close">×</span>
+  <img id="modalImg" alt="बड़ी तस्वीर" onclick="event.stopPropagation()">
+</div>
+<script>
+function openImg(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('show')}
+function closeImg(){document.getElementById('modal').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImg()});
+</script>
+</body>
+</html>
