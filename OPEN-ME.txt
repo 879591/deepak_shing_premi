@@ -1,8 +1,0 @@
-DEEPAK SINGH 'PREMI' — PREMIUM COLORFUL V5
-
-1. Extract/unzip this folder.
-2. Open index.html in Chrome.
-3. Keep the css, js and assets folders beside index.html.
-4. Do NOT open the HTML from inside the ZIP.
-
-All supplied photos are stored in assets/.
